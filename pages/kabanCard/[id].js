@@ -73,7 +73,7 @@ const KabanBoardCard = ({ kabanCardData }) => {
 
      const onSubmitForm = async (res) => {
           console.log(res)
-          if (res.name == '' || res.description == '' || res.taskStatus == "") {
+          if (res.kabanBoardId == '' || res.name == '' || res.description == '' || res.taskStatus == "") {
                setValidationError('Please fill in all fields.');
                return;
           }
