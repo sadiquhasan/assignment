@@ -30,6 +30,10 @@ const KabanBoardCard = ({ kabanCardData }) => {
      })
      const [form, setForm] = useState({ task: "", open: false })
 
+     useEffect(() => {
+          fetchData;
+     }, [form, isModalOpen])
+
 
      const editKabanCard = (res) => {
           setFormData(res);
@@ -126,9 +130,6 @@ const KabanBoardCard = ({ kabanCardData }) => {
           }
      }
 
-     useEffect(() => {
-          fetchData();
-     }, [form, isModalOpen])
 
      return (
           <Layout>
@@ -160,8 +161,8 @@ const KabanBoardCard = ({ kabanCardData }) => {
                     {(kabanCardData && Object.keys(kabanCardData).length !== 0) ?
                          <div className="grid grid-cols-3 gap-4">
                               <div class="col-span-1">
-                                   {kabanCardDataItem?.todo?.map(res =>
-                                        <div className="shadow-lg p-4">
+                                   {kabanCardDataItem?.todo?.map((res, index) =>
+                                        <div className="shadow-lg p-4" key={index}>
                                              <div className="flex items-center justify-between">
                                                   <h3 className="text-lg font-bold text-gray-500 hover:text-gray-700 cursor-pointer">{res.name}</h3>
 
@@ -183,8 +184,8 @@ const KabanBoardCard = ({ kabanCardData }) => {
                                    )}
                               </div>
                               <div class="col-span-1">
-                                   {kabanCardDataItem?.inprogress?.map(res =>
-                                        <div className="shadow-lg p-4">
+                                   {kabanCardDataItem?.inprogress?.map((res, index) =>
+                                        <div className="shadow-lg p-4" key={index}>
                                              <div className="flex items-center justify-between">
                                                   <h3 className="text-lg font-bold text-gray-500 hover:text-gray-700 cursor-pointer">{res.name}</h3>
 
@@ -206,8 +207,8 @@ const KabanBoardCard = ({ kabanCardData }) => {
                                    )}
                               </div>
                               <div class="col-span-1">
-                                   {kabanCardDataItem?.completed?.map(res =>
-                                        <div className="shadow-lg p-4">
+                                   {kabanCardDataItem?.completed?.map((res, index) =>
+                                        <div className="shadow-lg p-4" key={index}>
                                              <div className="flex items-center justify-between">
                                                   <h3 className="text-lg font-bold text-gray-500 hover:text-gray-700 cursor-pointer">{res.name}</h3>
 
