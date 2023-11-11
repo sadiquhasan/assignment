@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getAllBooksData } from "@/pages/API";
+import { getAllBooksData } from "@/api-helpers/API";
 
 export const getAllBooks = async () => {
   const res = await axios.get(getAllBooksData);

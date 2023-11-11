@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../Layout';
 import { useRouter } from 'next/router';
-import API from '../API';
+import API from '../../api-helpers/API';
 import moment from 'moment';
 import NoRecord from '../component/NoRecord';
 import Modal from "../component/Model"

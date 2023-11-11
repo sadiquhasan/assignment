@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Layout from "./Layout";
-import API from "./API";
+import API from "../api-helpers/API";
 import { useRouter } from "next/router";
 import Form from './component/KabanBoardForm'
 import Modal from "./component/Model";
