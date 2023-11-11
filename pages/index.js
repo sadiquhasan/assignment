@@ -1,7 +1,9 @@
 import Layout from "./Layout";
 import { useRouter } from 'next/router';
 
+
 const Home = () => {
+
   const router = useRouter();
   return (
     <Layout>

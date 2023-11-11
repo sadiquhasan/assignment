@@ -1,8 +1,8 @@
 import axios from "axios";
-require("dotenv").config();
+import { config } from 'dotenv';
+config();
 
-// const baseURL = process.env.BASE_URL
-const baseURL = "http://localhost:3000/api/"
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL
 
 const API = axios.create({
   baseURL: baseURL,

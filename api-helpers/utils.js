@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
-// require("dotenv").config();
+import { config } from 'dotenv';
+config();
 
-const database = process.env.DATABASE
-// const database = "mongodb+srv://admin:12345@cluster0.8f52sev.mongodb.net/?retryWrites=true&w=majority"
+const database = process.env.NEXT_PUBLIC_DATABASE
 
 export const connectDB = async () => {
   await mongoose
