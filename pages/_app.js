@@ -1,0 +1,11 @@
+import Navbar from "@/pages/component/Navbar";
+import "@/styles/globals.css";
+import '@fortawesome/fontawesome-free/css/all.css';
+
+export default function App({ Component, pageProps }) {
+  return (
+    <>
+      <Component {...pageProps} />
+    </>
+  );
+}
