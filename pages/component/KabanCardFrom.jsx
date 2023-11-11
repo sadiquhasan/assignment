@@ -5,7 +5,7 @@ const Modal = ({ initialData, isOpen, onClose, onSubmit }) => {
      const [formData, setFormData] = useState({
           name: "",
           description: "",
-          kabanBoardId: initialData.kabanBoardId,
+          kabanBoardId: initialData.kabanBoardId ?? "",
           dueDate: "",
           taskStatus: "todo"
      });
