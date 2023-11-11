@@ -115,7 +115,7 @@ const KabanBoard = ({ kabanBoard }) => {
         {validationError && <h1 className="text-red-500 text-center text-xl">{validationError}</h1>}
         <div className="grid grid-cols-3 gap-4">
           {kabanBoardData?.map(res =>
-            <div className="shadow-md p-4">
+            <div className="shadow-md p-4" key={res._id}>
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-bold text-gray-500 hover:text-gray-700 cursor-pointer" onClick={() => routeTo(res)}>{res.name}</h3>
 
